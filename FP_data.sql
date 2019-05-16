@@ -106,42 +106,89 @@ insert into user_komunitas values('USR0000048', 'KMT0000003', 'USR0000008', 1);
 insert into user_komunitas values('USR0000049', 'KMT0000004', 'USR0000009', 1);
 
 -- PENGUMUMAN
+   -- GD
 insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000003', 'USR0000003', 'Welcome Party GD', 'Selamat datang di komunitas Gamedev. Ayo kumpul. Tanggal 27 September 2019.', to_date('20/09/2019','dd/mm/yyyy'), to_date('27/09/2019','dd/mm/yyyy'));
 insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000003', 'USR0000003', 'Game Jam', 'Selesaikan modul pengenalan kalian dan bikin game!', to_date('27/09/2019','dd/mm/yyyy'), to_date('30/09/2019','dd/mm/yyyy'));
+   -- CP
 insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000004', 'USR0000004', 'Welcome Party CP', 'Selamat datang di komunitas CP. Ayo kumpul. Tanggal 27 September 2019.', to_date('20/09/2019','dd/mm/yyyy'), to_date('27/09/2019','dd/mm/yyyy'));
 insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000004', 'USR0000004', 'Code Gym', 'Selesaikan modul pengenalan kalian dan koding bareng!', to_date('27/09/2019','dd/mm/yyyy'), to_date('30/09/2019','dd/mm/yyyy'));
+   -- TCyber
+insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000001', 'USR0000001', 'Welcome Party TCyber', 'Selamat datang di komunitas TCyber. Ayo kumpul. Tanggal 27 September 2019.', to_date('20/09/2019','dd/mm/yyyy'), to_date('27/09/2019','dd/mm/yyyy'));
+insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000001', 'USR0000001', 'CTF', 'Selesaikan modul pengenalan kalian dan kumpulkan flag!', to_date('27/09/2019','dd/mm/yyyy'), to_date('30/09/2019','dd/mm/yyyy'));
+   -- Android
+insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000002', 'USR0000002', 'Welcome Party Android Developer', 'Selamat datang di komunitas Android Developer. Ayo kumpul. Tanggal 27 September 2019.', to_date('20/09/2019','dd/mm/yyyy'), to_date('27/09/2019','dd/mm/yyyy'));
+insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000002', 'USR0000002', 'Hackathon', 'Selesaikan modul pengenalan kalian dan buat aplikasimu!', to_date('27/09/2019','dd/mm/yyyy'), to_date('30/09/2019','dd/mm/yyyy'));
 
 -- MODUL
+   -- GD
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 1 Gamedev','Ini modul 1 gamedev','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 2 Gamedev','Ini modul 2 gamedev','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 3 Gamedev','Ini modul 3 gamedev','1');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 4 Gamedev','Ini modul 4 gamedev','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 5 Gamedev','Ini modul 5 gamedev','1');
+   -- CP
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 1 CP','Ini modul 1 CP','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 2 CP','Ini modul 2 CP','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 3 CP','Ini modul 3 CP','1');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 4 CP','Ini modul 4 CP','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 5 CP','Ini modul 5 CP','1');
+   -- TCyber
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 1 TCyber','Ini modul 1 TCyber','0');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 2 TCyber','Ini modul 2 TCyber','0');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 3 TCyber','Ini modul 3 TCyber','0');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 4 TCyber','Ini modul 4 TCyber','1');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 5 TCyber','Ini modul 5 TCyber','1');
+   -- AndroidDevs
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 1 AndroidDevs','Ini modul 1 AndroidDevs','0');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 2 AndroidDevs','Ini modul 2 AndroidDevs','0');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 3 AndroidDevs','Ini modul 3 AndroidDevs','1');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 4 AndroidDevs','Ini modul 4 AndroidDevs','1');
+insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 5 AndroidDevs','Ini modul 5 AndroidDevs','1');
+
 
 -- POST
+   -- GD
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000003','USR0000008','Game Engine Favorit','Kira-kira paling bagus pake game engine apa ya?');
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000003','USR0000003','Kumpul lagi kapan?','Komen ya');
+   -- CP
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000004','USR0000009','Latihan koding online','Kira-kira paling bagus di mana ya?');
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000004','USR0000004','Kumpul lagi kapan?','Komen ya');
+   -- TCyber
+insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000001','USR0000011','referensi CTF','yang punya referensi yang bagus minta dong');
+insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000001','USR0000001','Kumpul lagi kapan?','Komen ya');
+   -- AndroidDevs
+insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000002','USR0000012','Framework vs Native','Ada yang tau pros and cons native dan framework ga?');
+insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000002','USR0000002','Kumpul lagi kapan?','Komen ya');
 
 -- REPLY
+   -- GD
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000033','Unity bagus');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000038','Nggak unreal aja?');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000043','Tergantung kebutuhan sih');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000033','Bebas');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000038','Bebas');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000043','Bebas');
+   -- CP
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000019','Unity bagus');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000024','Nggak unreal aja?');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000029','Tergantung kebutuhan sih');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000019','Bebas');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000024','Bebas');
 insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000029','Bebas');
+   -- TCyber
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000031','nyimak bro, lagi nyari juga');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000036','coba cari di github bos, banyak');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000027','ini bro url.com, coba gabung group facebook juga, banyak yang sharing disana');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000027','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000022','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000027','Bebas');
+   -- AndroidDevs
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000018','tergantung selera bosq');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000023','kalo aku sih lebih prefer make framework, lebih simple');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000028','aku lebih milih native, udah terlanjur nyaman');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000018','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000023','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000028','Bebas');
 
 -- SYARAT
 insert into syarat(MD_ID, MOD_MD_ID) values();
