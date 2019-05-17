@@ -65,8 +65,8 @@ insert into komunitas values('KMT0000004', 'CP', 'Komunitas competitive programm
 
 -- UDAH --
    -- TCyber
-insert into user_komunitas values('USR0000001', 'KMT0000001', 'USR0000000', 2);
-insert into user_komunitas values('USR0000006', 'KMT0000001', 'USR0000000', 2);
+insert into user_komunitas values('USR0000001', 'KMT0000001', NULL, 2);
+insert into user_komunitas values('USR0000006', 'KMT0000001', NULL, 2);
 insert into user_komunitas values('USR0000011', 'KMT0000001', 'USR0000001', 1);
 insert into user_komunitas values('USR0000016', 'KMT0000001', 'USR0000006', 1);
 insert into user_komunitas values('USR0000021', 'KMT0000001', 'USR0000001', -1);
@@ -77,8 +77,8 @@ insert into user_komunitas values('USR0000041', 'KMT0000001', 'USR0000001', 1);
 insert into user_komunitas values('USR0000046', 'KMT0000001', 'USR0000006', 1);
 
    -- AndroidDevs
-insert into user_komunitas values('USR0000002', 'KMT0000002', 'USR0000000', 2);
-insert into user_komunitas values('USR0000007', 'KMT0000002', 'USR0000000', 2);
+insert into user_komunitas values('USR0000002', 'KMT0000002', NULL, 2);
+insert into user_komunitas values('USR0000007', 'KMT0000002', NULL, 2);
 insert into user_komunitas values('USR0000012', 'KMT0000002', 'USR0000002', 1);
 insert into user_komunitas values('USR0000017', 'KMT0000002', 'USR0000007', 1);
 insert into user_komunitas values('USR0000022', 'KMT0000002', 'USR0000002', -1);
@@ -89,8 +89,8 @@ insert into user_komunitas values('USR0000042', 'KMT0000002', 'USR0000002', 1);
 insert into user_komunitas values('USR0000047', 'KMT0000002', 'USR0000007', 1);
 
    -- CP
-insert into user_komunitas values('USR0000003', 'KMT0000003', 'USR0000000', 2);
-insert into user_komunitas values('USR0000008', 'KMT0000003', 'USR0000000', 2);
+insert into user_komunitas values('USR0000003', 'KMT0000003', NULL, 2);
+insert into user_komunitas values('USR0000008', 'KMT0000003', NULL, 2);
 insert into user_komunitas values('USR0000013', 'KMT0000003', 'USR0000003', 1);
 insert into user_komunitas values('USR0000018', 'KMT0000003', 'USR0000008', 1);
 insert into user_komunitas values('USR0000023', 'KMT0000003', 'USR0000003', 1);
@@ -101,8 +101,8 @@ insert into user_komunitas values('USR0000043', 'KMT0000003', 'USR0000003', 1);
 insert into user_komunitas values('USR0000048', 'KMT0000003', 'USR0000008', 1);
 
    -- GD
-insert into user_komunitas values('USR0000004', 'KMT0000004', 'USR0000000', 2);
-insert into user_komunitas values('USR0000009', 'KMT0000004', 'USR0000000', 2);
+insert into user_komunitas values('USR0000004', 'KMT0000004', NULL, 2);
+insert into user_komunitas values('USR0000009', 'KMT0000004', NULL, 2);
 insert into user_komunitas values('USR0000014', 'KMT0000004', 'USR0000004', 1);
 insert into user_komunitas values('USR0000019', 'KMT0000004', 'USR0000009', 1);
 insert into user_komunitas values('USR0000024', 'KMT0000004', 'USR0000004', 1);

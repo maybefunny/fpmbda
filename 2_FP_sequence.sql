@@ -15,7 +15,9 @@ DECLARE
     pengumuman_next_val number;
 BEGIN
     select pengumuman_seq.nextval into pengumuman_next_val from dual;
+    IF :new.PNG_ID IS NULL THEN
     :new.PNG_ID := 'PNG' || to_char(lpad(pengumuman_next_val,7,'0'));
+    END IF;
 END;
 
 Drop sequence modul_seq;
@@ -29,7 +31,9 @@ DECLARE
     modul_next_val number;
 BEGIN
     select modul_seq.nextval into modul_next_val from dual;
+    IF :new.MD_ID IS NULL THEN
     :new.MD_ID := 'MD' || to_char(lpad(modul_next_val,8,'0'));
+    END IF;
 END;
 
 Drop sequence post_seq;
@@ -43,7 +47,9 @@ DECLARE
     post_next_val number;
 BEGIN
     select post_seq.nextval into post_next_val from dual;
+    IF :new.POST_ID IS NULL THEN
     :new.POST_ID := 'POST' || to_char(lpad(post_next_val,6,'0'));
+    END IF;
 END;
 
 Drop sequence reply_seq;
@@ -57,7 +63,9 @@ DECLARE
     reply_next_val number;
 BEGIN
     select reply_seq.nextval into reply_next_val from dual;
+    IF :new.RPL_ID IS NULL THEN
     :new.RPL_ID := 'RPL' || to_char(lpad(reply_next_val,7,'0'));
+    END IF;
 END;
 
 Drop sequence kmt_seq;
@@ -71,7 +79,9 @@ DECLARE
     kmt_next_val number;
 BEGIN
     select kmt_seq.nextval into kmt_next_val from dual;
-    :new.RPL_ID := 'KMT' || to_char(lpad(kmt_next_val,7,'0'));
+    IF :new.KMT_ID IS NULL THEN
+    :new.KMT_ID := 'KMT' || to_char(lpad(kmt_next_val,7,'0'));
+    END IF;
 END;
 
 Drop sequence usr_seq;
@@ -85,5 +95,7 @@ DECLARE
     usr_next_val number;
 BEGIN
     select usr_seq.nextval into usr_next_val from dual;
-    :new.RPL_ID := 'USR' || to_char(lpad(usr_next_val,7,'0'));
+    IF :new.USR_ID IS NULL THEN
+    :new.USR_ID := 'USR' || to_char(lpad(usr_next_val,7,'0'));
+    END IF;
 END;
