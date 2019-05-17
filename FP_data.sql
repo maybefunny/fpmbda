@@ -127,25 +127,25 @@ insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_
 insert into pengumuman(kmt_id, usr_id, png_nama, png_konten, png_tgltampil, png_tglselesai) values('KMT0000004', 'USR0000004', 'Code Gym', 'Selesaikan modul pengenalan kalian dan koding bareng!', to_date('27/09/2019','dd/mm/yyyy'), to_date('30/09/2019','dd/mm/yyyy'));
 
 -- MODUL
-   -- TCyber
+   -- TCyber         1-5
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 1 TCyber','Ini modul 1 TCyber','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 2 TCyber','Ini modul 2 TCyber','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 3 TCyber','Ini modul 3 TCyber','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 4 TCyber','Ini modul 4 TCyber','1');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000001','USR0000001','Modul 5 TCyber','Ini modul 5 TCyber','1');
-   -- AndroidDevs
+   -- AndroidDevs    6-10
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 1 AndroidDevs','Ini modul 1 AndroidDevs','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 2 AndroidDevs','Ini modul 2 AndroidDevs','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 3 AndroidDevs','Ini modul 3 AndroidDevs','1');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 4 AndroidDevs','Ini modul 4 AndroidDevs','1');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000002','USR0000002','Modul 5 AndroidDevs','Ini modul 5 AndroidDevs','1');
-   -- GD
+   -- GD             11-15
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 1 Gamedev','Ini modul 1 gamedev','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 2 Gamedev','Ini modul 2 gamedev','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 3 Gamedev','Ini modul 3 gamedev','1');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 4 Gamedev','Ini modul 4 gamedev','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000003','USR0000003','Modul 5 Gamedev','Ini modul 5 gamedev','1');
-   -- CP
+   -- CP             16-20
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 1 CP','Ini modul 1 CP','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 2 CP','Ini modul 2 CP','0');
 insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000004','USR0000004','Modul 3 CP','Ini modul 3 CP','1');
@@ -154,60 +154,130 @@ insert into modul(KMT_ID, USR_ID, MD_NAMA, MD_KONTEN, MD_SUBMIT) values('KMT0000
 
 
 -- POST
-   -- TCyber
+   -- TCyber         1-2
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000001','USR0000011','referensi CTF','yang punya referensi yang bagus minta dong');
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000001','USR0000001','Kumpul lagi kapan?','Komen ya');
-   -- AndroidDevs
+   -- AndroidDevs    3-4
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000002','USR0000012','Framework vs Native','Ada yang tau pros and cons native dan framework ga?');
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000002','USR0000002','Kumpul lagi kapan?','Komen ya');
-   -- GD
+   -- GD             5-6
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000003','USR0000008','Game Engine Favorit','Kira-kira paling bagus pake game engine apa ya?');
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000003','USR0000003','Kumpul lagi kapan?','Komen ya');
-   -- CP
+   -- CP             7-8
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000004','USR0000009','Latihan koding online','Kira-kira paling bagus di mana ya?');
 insert into post(KMT_ID, USR_ID, POST_JUDUL, POST_KONTEN) values('KMT0000004','USR0000004','Kumpul lagi kapan?','Komen ya');
 
 -- REPLY
    -- TCyber
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000031','nyimak bro, lagi nyari juga');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000036','coba cari di github bos, banyak');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000027','ini bro url.com, coba gabung group facebook juga, banyak yang sharing disana');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000027','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000022','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000027','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000031','nyimak bro, lagi nyari juga');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000036','coba cari di github bos, banyak');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000027','ini bro url.com, coba gabung group facebook juga, banyak yang sharing disana');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000027','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000022','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000027','Bebas');
    -- AndroidDevs
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000018','tergantung selera bosq');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000023','kalo aku sih lebih prefer make framework, lebih simple');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000028','aku lebih milih native, udah terlanjur nyaman');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000018','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000023','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000028','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000018','tergantung selera bosq');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000023','kalo aku sih lebih prefer make framework, lebih simple');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000028','aku lebih milih native, udah terlanjur nyaman');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000018','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000023','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000028','Bebas');
    -- GD
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000033','Unity bagus');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000038','Nggak unreal aja?');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000001','USR0000043','Tergantung kebutuhan sih');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000033','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000038','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000002','USR0000043','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000033','Unity bagus');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000038','Nggak unreal aja?');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000005','USR0000043','Tergantung kebutuhan sih');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000033','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000038','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000006','USR0000043','Bebas');
    -- CP
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000019','Unity bagus');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000024','Nggak unreal aja?');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000003','USR0000029','Tergantung kebutuhan sih');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000019','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000024','Bebas');
-insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000004','USR0000029','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000019','Unity bagus');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000024','Nggak unreal aja?');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000007','USR0000029','Tergantung kebutuhan sih');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000019','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000024','Bebas');
+insert into reply(POST_ID, USR_ID, RPL_KONTEN) values('POST000008','USR0000029','Bebas');
 
 -- SYARAT
    -- TCyber
-insert into syarat(MD_ID, MOD_MD_ID) values('MD00000013', 'MD00000012');
-insert into syarat(MD_ID, MOD_MD_ID) values('MD00000015', 'MD00000014');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000003', 'MD00000002');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000005', 'MD00000004');
    -- AndroidDevs
-insert into syarat(MD_ID, MOD_MD_ID) values('MD00000017', 'MD00000016');
-insert into syarat(MD_ID, MOD_MD_ID) values('MD00000018', 'MD00000017');
-insert into syarat(MD_ID, MOD_MD_ID) values('MD00000020', 'MD00000018');
-insert into syarat(MD_ID, MOD_MD_ID) values('MD00000019', 'MD00000016');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000007', 'MD00000006');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000008', 'MD00000007');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000010', 'MD00000008');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000009', 'MD00000006');
    -- GD
    -- CP
 
 -- EDIT NTAR NUNGGU MODUL --
-insert into users_modul(md_id, usr_id, submission, status_selesai) values('', '', '', '');
+   -- TCyber
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000001', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000006', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000011', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000016', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000026', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000031', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000041', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000001', 'USR0000046', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000001', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000006', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000011', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000016', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000026', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000031', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000041', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000002', 'USR0000046', '0', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000003', 'USR0000001', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000003', 'USR0000006', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000003', 'USR0000011', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000003', 'USR0000031', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000003', 'USR0000041', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000003', 'USR0000046', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000004', 'USR0000001', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000004', 'USR0000006', '0', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000004', 'USR0000011', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000004', 'USR0000031', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000004', 'USR0000041', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000004', 'USR0000046', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000005', 'USR0000011', '1', to_date('30/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000005', 'USR0000031', '1', to_date('30/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000005', 'USR0000041', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000005', 'USR0000046', '1', to_date('29/09/2019','dd/mm/yyyy'));
+   -- AndroidDevs
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000002', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000007', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000012', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000017', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000027', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000032', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000037', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000042', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000006', 'USR0000047', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000002', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000007', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000012', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000017', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000027', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000037', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000042', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000007', 'USR0000047', '0', to_date('27/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000008', 'USR0000002', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000008', 'USR0000007', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000008', 'USR0000012', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000008', 'USR0000017', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000008', 'USR0000037', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000008', 'USR0000047', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000009', 'USR0000002', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000009', 'USR0000007', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000009', 'USR0000012', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000009', 'USR0000017', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000009', 'USR0000037', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000009', 'USR0000047', '1', to_date('28/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000010', 'USR0000002', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000010', 'USR0000007', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000010', 'USR0000012', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000010', 'USR0000017', '1', to_date('30/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000010', 'USR0000037', '1', to_date('29/09/2019','dd/mm/yyyy'));
+insert into users_modul(md_id, usr_id, submission, status_selesai) values('MD00000010', 'USR0000047', '1', to_date('30/09/2019','dd/mm/yyyy'));
+   -- GD
+   -- CP
