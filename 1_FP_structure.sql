@@ -1,300 +1,231 @@
 /*==============================================================*/
-/* DBMS name:      Sybase SQL Anywhere 12                       */
-/* Created on:     17-May-19 10:20:03                           */
+/* DBMS name:      ORACLE Version 10g                           */
+/* Created on:     17-May-19 10:24:36                           */
 /*==============================================================*/
 
 
-if exists(select 1 from sys.sysforeignkey where role='FK_MODUL_REFERENCE_USER') then
-    alter table MODUL
-       delete foreign key FK_MODUL_REFERENCE_USER
-end if;
+alter table MODUL
+   drop constraint FK_MODUL_REFERENCE_USER;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_MODUL_REFERENCE_KOMUNITA') then
-    alter table MODUL
-       delete foreign key FK_MODUL_REFERENCE_KOMUNITA
-end if;
+alter table MODUL
+   drop constraint FK_MODUL_REFERENCE_KOMUNITA;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_PENGUMUM_REFERENCE_USER') then
-    alter table PENGUMUMAN
-       delete foreign key FK_PENGUMUM_REFERENCE_USER
-end if;
+alter table PENGUMUMAN
+   drop constraint FK_PENGUMUM_REFERENCE_USER;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_PENGUMUM_REFERENCE_KOMUNITA') then
-    alter table PENGUMUMAN
-       delete foreign key FK_PENGUMUM_REFERENCE_KOMUNITA
-end if;
+alter table PENGUMUMAN
+   drop constraint FK_PENGUMUM_REFERENCE_KOMUNITA;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_POST_REFERENCE_KOMUNITA') then
-    alter table POST
-       delete foreign key FK_POST_REFERENCE_KOMUNITA
-end if;
+alter table POST
+   drop constraint FK_POST_REFERENCE_KOMUNITA;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_POST_REFERENCE_USER') then
-    alter table POST
-       delete foreign key FK_POST_REFERENCE_USER
-end if;
+alter table POST
+   drop constraint FK_POST_REFERENCE_USER;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_REPLY_REFERENCE_POST') then
-    alter table REPLY
-       delete foreign key FK_REPLY_REFERENCE_POST
-end if;
+alter table REPLY
+   drop constraint FK_REPLY_REFERENCE_POST;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_REPLY_REFERENCE_USER') then
-    alter table REPLY
-       delete foreign key FK_REPLY_REFERENCE_USER
-end if;
+alter table REPLY
+   drop constraint FK_REPLY_REFERENCE_USER;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_SYARAT_REFERENCE_MODUL_MOD') then
-    alter table SYARAT
-       delete foreign key FK_SYARAT_REFERENCE_MODUL_MOD
-end if;
+alter table SYARAT
+   drop constraint FK_SYARAT_REFERENCE_MODUL_MOD;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_SYARAT_REFERENCE_MODUL') then
-    alter table SYARAT
-       delete foreign key FK_SYARAT_REFERENCE_MODUL
-end if;
+alter table SYARAT
+   drop constraint FK_SYARAT_REFERENCE_MODUL;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_USER_KOM_REFERENCE_USER') then
-    alter table USER_KOMUNITAS
-       delete foreign key FK_USER_KOM_REFERENCE_USER
-end if;
+alter table USER_KOMUNITAS
+   drop constraint FK_USER_KOM_REFERENCE_USER;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_USER_KOM_REFERENCE_KOMUNITA') then
-    alter table USER_KOMUNITAS
-       delete foreign key FK_USER_KOM_REFERENCE_KOMUNITA
-end if;
+alter table USER_KOMUNITAS
+   drop constraint FK_USER_KOM_REFERENCE_KOMUNITA;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_USER_KOM_REFERENCE_USER_ADM') then
-    alter table USER_KOMUNITAS
-       delete foreign key FK_USER_KOM_REFERENCE_USER_ADM
-end if;
+alter table USER_KOMUNITAS
+   drop constraint FK_USER_KOM_REFERENCE_USER_ADM;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_USER_MOD_REFERENCE_USER') then
-    alter table USER_MODUL
-       delete foreign key FK_USER_MOD_REFERENCE_USER
-end if;
+alter table USER_MODUL
+   drop constraint FK_USER_MOD_REFERENCE_USER;
 
-if exists(select 1 from sys.sysforeignkey where role='FK_USER_MOD_REFERENCE_MODUL') then
-    alter table USER_MODUL
-       delete foreign key FK_USER_MOD_REFERENCE_MODUL
-end if;
+alter table USER_MODUL
+   drop constraint FK_USER_MOD_REFERENCE_MODUL;
 
-drop table if exists KOMUNITAS;
+drop table KOMUNITAS cascade constraints;
 
-drop table if exists MODUL;
+drop table MODUL cascade constraints;
 
-drop table if exists PENGUMUMAN;
+drop table PENGUMUMAN cascade constraints;
 
-drop table if exists POST;
+drop table POST cascade constraints;
 
-drop table if exists REPLY;
+drop table REPLY cascade constraints;
 
-drop table if exists SYARAT;
+drop table SYARAT cascade constraints;
 
-drop table if exists "USER";
+drop table "USER" cascade constraints;
 
-drop table if exists USER_KOMUNITAS;
+drop table USER_KOMUNITAS cascade constraints;
 
-drop table if exists USER_MODUL;
+drop table USER_MODUL cascade constraints;
 
 /*==============================================================*/
 /* Table: KOMUNITAS                                             */
 /*==============================================================*/
-create table KOMUNITAS 
-(
-   KMT_ID               char(10)                       not null,
-   KMT_NAMA             varchar(20)                    null,
-   KMT_DESKRIPSI        varchar(200)                   null,
-   constraint PK_KOMUNITAS primary key clustered (KMT_ID)
+create table KOMUNITAS  (
+   KMT_ID               CHAR(10)                        not null,
+   KMT_NAMA             VARCHAR2(20),
+   KMT_DESKRIPSI        VARCHAR2(200),
+   constraint PK_KOMUNITAS primary key (KMT_ID)
 );
 
 /*==============================================================*/
 /* Table: MODUL                                                 */
 /*==============================================================*/
-create table MODUL 
-(
-   MD_ID                char(10)                       not null,
-   KMT_ID               char(10)                       null,
-   USR_ID               char(10)                       null,
-   MD_NAMA              varchar(20)                    null,
-   MD_KONTEN            text                           null,
-   MD_SUBMIT            smallint                       null,
-   constraint PK_MODUL primary key clustered (MD_ID)
+create table MODUL  (
+   MD_ID                CHAR(10)                        not null,
+   KMT_ID               CHAR(10),
+   USR_ID               CHAR(10),
+   MD_NAMA              VARCHAR2(20),
+   MD_KONTEN            CLOB,
+   MD_SUBMIT            SMALLINT,
+   constraint PK_MODUL primary key (MD_ID)
 );
 
 /*==============================================================*/
 /* Table: PENGUMUMAN                                            */
 /*==============================================================*/
-create table PENGUMUMAN 
-(
-   PNG_ID               char(10)                       not null,
-   KMT_ID               char(10)                       null,
-   USR_ID               char(10)                       null,
-   PNG_NAMA             varchar(200)                   not null,
-   PNG_KONTEN           text                           not null,
-   PNG_TGLTAMPIL        date                           not null,
-   PNG_TGLSELESAI       date                           not null,
-   constraint PK_PENGUMUMAN primary key clustered (PNG_ID)
+create table PENGUMUMAN  (
+   PNG_ID               CHAR(10)                        not null,
+   KMT_ID               CHAR(10),
+   USR_ID               CHAR(10),
+   PNG_NAMA             VARCHAR2(200)                   not null,
+   PNG_KONTEN           CLOB                            not null,
+   PNG_TGLTAMPIL        DATE                            not null,
+   PNG_TGLSELESAI       DATE                            not null,
+   constraint PK_PENGUMUMAN primary key (PNG_ID)
 );
 
 /*==============================================================*/
 /* Table: POST                                                  */
 /*==============================================================*/
-create table POST 
-(
-   POST_ID              char(10)                       not null,
-   KMT_ID               char(10)                       null,
-   USR_ID               char(10)                       null,
-   POST_JUDUL           varchar(150)                   null,
-   POST_KONTEN          text                           null,
-   constraint PK_POST primary key clustered (POST_ID)
+create table POST  (
+   POST_ID              CHAR(10)                        not null,
+   KMT_ID               CHAR(10),
+   USR_ID               CHAR(10),
+   POST_JUDUL           VARCHAR2(150),
+   POST_KONTEN          CLOB,
+   constraint PK_POST primary key (POST_ID)
 );
 
 /*==============================================================*/
 /* Table: REPLY                                                 */
 /*==============================================================*/
-create table REPLY 
-(
-   RPL_ID               char(10)                       not null,
-   POST_ID              char(10)                       null,
-   USR_ID               char(10)                       null,
-   RPL_KONTEN           text                           null,
-   constraint PK_REPLY primary key clustered (RPL_ID)
+create table REPLY  (
+   RPL_ID               CHAR(10)                        not null,
+   POST_ID              CHAR(10),
+   USR_ID               CHAR(10),
+   RPL_KONTEN           CLOB,
+   constraint PK_REPLY primary key (RPL_ID)
 );
 
 /*==============================================================*/
 /* Table: SYARAT                                                */
 /*==============================================================*/
-create table SYARAT 
-(
-   MD_ID                char(10)                       not null,
-   MOD_MD_ID            char(10)                       not null,
-   constraint PK_SYARAT primary key clustered (MD_ID, MOD_MD_ID)
+create table SYARAT  (
+   MD_ID                CHAR(10)                        not null,
+   MOD_MD_ID            CHAR(10)                        not null,
+   constraint PK_SYARAT primary key (MD_ID, MOD_MD_ID)
 );
 
 /*==============================================================*/
 /* Table: "USER"                                                */
 /*==============================================================*/
-create table "USER" 
-(
-   USR_ID               char(10)                       not null,
-   USR_NRP              char(15)                       not null,
-   USR_NAMA             varchar(20)                    not null,
-   USR_EMAIL            varchar(100)                   not null,
-   constraint PK_USER primary key clustered (USR_ID)
+create table "USER"  (
+   USR_ID               CHAR(10)                        not null,
+   USR_NRP              CHAR(15)                        not null,
+   USR_NAMA             VARCHAR2(20)                    not null,
+   USR_EMAIL            VARCHAR2(100)                   not null,
+   constraint PK_USER primary key (USR_ID)
 );
 
 /*==============================================================*/
 /* Table: USER_KOMUNITAS                                        */
 /*==============================================================*/
-create table USER_KOMUNITAS 
-(
-   USR_ID               char(10)                       not null,
-   KMT_ID               char(10)                       not null,
-   ADM_USR_ID           char(10)                       null,
-   STATUS               smallint                       null,
-   constraint PK_USER_KOMUNITAS primary key clustered (USR_ID, KMT_ID)
+create table USER_KOMUNITAS  (
+   USR_ID               CHAR(10)                        not null,
+   KMT_ID               CHAR(10)                        not null,
+   ADM_USR_ID           CHAR(10),
+   STATUS               SMALLINT,
+   constraint PK_USER_KOMUNITAS primary key (USR_ID, KMT_ID)
 );
 
 /*==============================================================*/
 /* Table: USER_MODUL                                            */
 /*==============================================================*/
-create table USER_MODUL 
-(
-   USR_ID               char(10)                       not null,
-   MD_ID                char(10)                       not null,
-   SUBMISSION           smallint                       null,
-   STATUS_SELESAI       boolean                        null,
-   constraint PK_USER_MODUL primary key clustered (USR_ID, MD_ID)
+create table USER_MODUL  (
+   USR_ID               CHAR(10)                        not null,
+   MD_ID                CHAR(10)                        not null,
+   SUBMISSION           SMALLINT,
+   STATUS_SELESAI       smallint,
+   constraint PK_USER_MODUL primary key (USR_ID, MD_ID)
 );
 
 alter table MODUL
    add constraint FK_MODUL_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table MODUL
    add constraint FK_MODUL_REFERENCE_KOMUNITA foreign key (KMT_ID)
-      references KOMUNITAS (KMT_ID)
-      on update restrict
-      on delete restrict;
+      references KOMUNITAS (KMT_ID);
 
 alter table PENGUMUMAN
    add constraint FK_PENGUMUM_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table PENGUMUMAN
    add constraint FK_PENGUMUM_REFERENCE_KOMUNITA foreign key (KMT_ID)
-      references KOMUNITAS (KMT_ID)
-      on update restrict
-      on delete restrict;
+      references KOMUNITAS (KMT_ID);
 
 alter table POST
    add constraint FK_POST_REFERENCE_KOMUNITA foreign key (KMT_ID)
-      references KOMUNITAS (KMT_ID)
-      on update restrict
-      on delete restrict;
+      references KOMUNITAS (KMT_ID);
 
 alter table POST
    add constraint FK_POST_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table REPLY
    add constraint FK_REPLY_REFERENCE_POST foreign key (POST_ID)
-      references POST (POST_ID)
-      on update restrict
-      on delete restrict;
+      references POST (POST_ID);
 
 alter table REPLY
    add constraint FK_REPLY_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table SYARAT
    add constraint FK_SYARAT_REFERENCE_MODUL_MOD foreign key (MOD_MD_ID)
-      references MODUL (MD_ID)
-      on update restrict
-      on delete restrict;
+      references MODUL (MD_ID);
 
 alter table SYARAT
    add constraint FK_SYARAT_REFERENCE_MODUL foreign key (MD_ID)
-      references MODUL (MD_ID)
-      on update restrict
-      on delete restrict;
+      references MODUL (MD_ID);
 
 alter table USER_KOMUNITAS
    add constraint FK_USER_KOM_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table USER_KOMUNITAS
    add constraint FK_USER_KOM_REFERENCE_KOMUNITA foreign key (KMT_ID)
-      references KOMUNITAS (KMT_ID)
-      on update restrict
-      on delete restrict;
+      references KOMUNITAS (KMT_ID);
 
 alter table USER_KOMUNITAS
    add constraint FK_USER_KOM_REFERENCE_USER_ADM foreign key (ADM_USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table USER_MODUL
    add constraint FK_USER_MOD_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID)
-      on update restrict
-      on delete restrict;
+      references "USER" (USR_ID);
 
 alter table USER_MODUL
    add constraint FK_USER_MOD_REFERENCE_MODUL foreign key (MD_ID)
-      references MODUL (MD_ID)
-      on update restrict
-      on delete restrict;
+      references MODUL (MD_ID);
 
