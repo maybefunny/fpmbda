@@ -61,7 +61,7 @@ drop table REPLY cascade constraints;
 
 drop table SYARAT cascade constraints;
 
-drop table "USER" cascade constraints;
+drop table USERS cascade constraints;
 
 drop table USER_KOMUNITAS cascade constraints;
 
@@ -137,9 +137,9 @@ create table SYARAT  (
 );
 
 /*==============================================================*/
-/* Table: "USER"                                                */
+/* Table: USERS                                                */
 /*==============================================================*/
-create table "USER"  (
+create table USERS  (
    USR_ID               CHAR(10)                        not null,
    USR_NRP              CHAR(15)                        not null,
    USR_NAMA             VARCHAR2(20)                    not null,
@@ -171,7 +171,7 @@ create table USER_MODUL  (
 
 alter table MODUL
    add constraint FK_MODUL_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table MODUL
    add constraint FK_MODUL_REFERENCE_KOMUNITA foreign key (KMT_ID)
@@ -179,7 +179,7 @@ alter table MODUL
 
 alter table PENGUMUMAN
    add constraint FK_PENGUMUM_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table PENGUMUMAN
    add constraint FK_PENGUMUM_REFERENCE_KOMUNITA foreign key (KMT_ID)
@@ -191,7 +191,7 @@ alter table POST
 
 alter table POST
    add constraint FK_POST_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table REPLY
    add constraint FK_REPLY_REFERENCE_POST foreign key (POST_ID)
@@ -199,7 +199,7 @@ alter table REPLY
 
 alter table REPLY
    add constraint FK_REPLY_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table SYARAT
    add constraint FK_SYARAT_REFERENCE_MODUL_MOD foreign key (MOD_MD_ID)
@@ -211,7 +211,7 @@ alter table SYARAT
 
 alter table USER_KOMUNITAS
    add constraint FK_USER_KOM_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table USER_KOMUNITAS
    add constraint FK_USER_KOM_REFERENCE_KOMUNITA foreign key (KMT_ID)
@@ -219,11 +219,11 @@ alter table USER_KOMUNITAS
 
 alter table USER_KOMUNITAS
    add constraint FK_USER_KOM_REFERENCE_USER_ADM foreign key (ADM_USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table USER_MODUL
    add constraint FK_USER_MOD_REFERENCE_USER foreign key (USR_ID)
-      references "USER" (USR_ID);
+      references USERS (USR_ID);
 
 alter table USER_MODUL
    add constraint FK_USER_MOD_REFERENCE_MODUL foreign key (MD_ID)

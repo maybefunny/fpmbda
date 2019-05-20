@@ -18,7 +18,7 @@ BEGIN
     IF :new.PNG_ID IS NULL THEN
     :new.PNG_ID := 'PNG' || to_char(lpad(pengumuman_next_val,7,'0'));
     END IF;
-END;
+END pengumuman_sequence;
 
 Drop sequence modul_seq;
 Create sequence modul_seq;
@@ -34,7 +34,7 @@ BEGIN
     IF :new.MD_ID IS NULL THEN
     :new.MD_ID := 'MD' || to_char(lpad(modul_next_val,8,'0'));
     END IF;
-END;
+END modul_sequence;
 
 Drop sequence post_seq;
 Create sequence post_seq;
@@ -50,7 +50,7 @@ BEGIN
     IF :new.POST_ID IS NULL THEN
     :new.POST_ID := 'POST' || to_char(lpad(post_next_val,6,'0'));
     END IF;
-END;
+END post_sequence;
 
 Drop sequence reply_seq;
 Create sequence reply_seq;
@@ -66,7 +66,7 @@ BEGIN
     IF :new.RPL_ID IS NULL THEN
     :new.RPL_ID := 'RPL' || to_char(lpad(reply_next_val,7,'0'));
     END IF;
-END;
+END reply_sequence;
 
 Drop sequence kmt_seq;
 Create sequence kmt_seq;
@@ -82,7 +82,7 @@ BEGIN
     IF :new.KMT_ID IS NULL THEN
     :new.KMT_ID := 'KMT' || to_char(lpad(kmt_next_val,7,'0'));
     END IF;
-END;
+END kmt_sequence;
 
 Drop sequence usr_seq;
 Create sequence usr_seq;
@@ -98,4 +98,4 @@ BEGIN
     IF :new.USR_ID IS NULL THEN
     :new.USR_ID := 'USR' || to_char(lpad(usr_next_val,7,'0'));
     END IF;
-END;
+END usr_sequence;
