@@ -1,3 +1,0 @@
--- Mendaftarkan user ke komunitas (argumen: USR_ID, KMT_ID)
--- Submit attachment modul (argumen: USR_ID, MD_ID, URL)
--- Admin menerima/menolak permintaan bergabung komunitas dari user (argument : USR_ID, KMT_ID, ADM_USR_ID, STATUS)
