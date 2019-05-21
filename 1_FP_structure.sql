@@ -49,6 +49,8 @@ alter table USER_MODUL
 alter table USER_MODUL
    drop constraint FK_USER_MOD_REFERENCE_MODUL;
 
+drop table DATA_TRACKING cascade constraints;
+
 drop table KOMUNITAS cascade constraints;
 
 drop table MODUL cascade constraints;
@@ -66,6 +68,17 @@ drop table USERS cascade constraints;
 drop table USER_KOMUNITAS cascade constraints;
 
 drop table USER_MODUL cascade constraints;
+
+/*==============================================================*/
+/* Table: DATA_TRACKING                                             */
+/*==============================================================*/
+CREATE TABLE DATA_TRACKING (
+   data_id              VARCHAR( 10 ) NOT NULL ,
+   field                VARCHAR( 50 ) NOT NULL ,
+   old_value            VARCHAR( 500 ) NOT NULL ,
+   new_value            VARCHAR( 500 ) NOT NULL ,
+   modified             DATE NOT NULL
+); 
 
 /*==============================================================*/
 /* Table: KOMUNITAS                                             */
