@@ -207,7 +207,13 @@ insert into syarat(MD_ID, MOD_MD_ID) values('MD00000008', 'MD00000007');
 insert into syarat(MD_ID, MOD_MD_ID) values('MD00000010', 'MD00000008');
 insert into syarat(MD_ID, MOD_MD_ID) values('MD00000009', 'MD00000006');
    -- GD
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000013', 'MD00000011');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000013', 'MD00000012');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000015', 'MD00000014');
    -- CP
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000018', 'MD00000016');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000018', 'MD00000017');
+insert into syarat(MD_ID, MOD_MD_ID) values('MD00000020', 'MD00000019');
 
 -- EDIT NTAR NUNGGU MODUL --
    -- TCyber
