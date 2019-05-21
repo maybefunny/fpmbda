@@ -33,7 +33,7 @@ BEGIN
     IF administrator = 2 THEN RETURN 1;
     ELSE RETURN 0;
     END IF;
-END is_admin;
+END;
 
 -- Cek jika user bisa mengikuti sebuah modul berdasarkan keanggotaan (argumen: USR_ID, MD_ID) (return: true/false)
 
@@ -48,4 +48,4 @@ BEGIN
     IF boleh > 0 THEN RETURN 1;
     ELSE RETURN 0;
     END IF;
-END bisa_ikut_modul;
+END;
