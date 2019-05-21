@@ -20,6 +20,10 @@ BEGIN
     END IF;
 END pengumuman_sequence;
 
+/*==============================================================*/
+/*                          END Sequence                        */
+/*==============================================================*/
+
 Drop sequence modul_seq;
 Create sequence modul_seq;
 
@@ -35,6 +39,10 @@ BEGIN
     :new.MD_ID := 'MD' || to_char(lpad(modul_next_val,8,'0'));
     END IF;
 END modul_sequence;
+
+/*==============================================================*/
+/*                          END Sequence                        */
+/*==============================================================*/
 
 Drop sequence post_seq;
 Create sequence post_seq;
@@ -52,6 +60,10 @@ BEGIN
     END IF;
 END post_sequence;
 
+/*==============================================================*/
+/*                          END Sequence                        */
+/*==============================================================*/
+
 Drop sequence reply_seq;
 Create sequence reply_seq;
 
@@ -67,6 +79,10 @@ BEGIN
     :new.RPL_ID := 'RPL' || to_char(lpad(reply_next_val,7,'0'));
     END IF;
 END reply_sequence;
+
+/*==============================================================*/
+/*                          END Sequence                        */
+/*==============================================================*/
 
 Drop sequence kmt_seq;
 Create sequence kmt_seq;
@@ -84,6 +100,10 @@ BEGIN
     END IF;
 END kmt_sequence;
 
+/*==============================================================*/
+/*                          END Sequence                        */
+/*==============================================================*/
+
 Drop sequence usr_seq;
 Create sequence usr_seq;
 
@@ -99,3 +119,7 @@ BEGIN
     :new.USR_ID := 'USR' || to_char(lpad(usr_next_val,7,'0'));
     END IF;
 END usr_sequence;
+
+/*==============================================================*/
+/*                          END Sequence                        */
+/*==============================================================*/
