@@ -1,17 +1,17 @@
 /*==============================================================*/
 /* DBMS name:      ORACLE Version 10g                           */
-/* Created on:     17-May-19 10:24:36                           */
+/* Created on:     21-May-19 21:54:47                           */
 /*==============================================================*/
 
 
 alter table MODUL
-   drop constraint FK_MODUL_REFERENCE_USER;
+   drop constraint FK_MODUL_REFERENCE_USERS;
 
 alter table MODUL
    drop constraint FK_MODUL_REFERENCE_KOMUNITA;
 
 alter table PENGUMUMAN
-   drop constraint FK_PENGUMUM_REFERENCE_USER;
+   drop constraint FK_PENGUMUM_REFERENCE_USERS;
 
 alter table PENGUMUMAN
    drop constraint FK_PENGUMUM_REFERENCE_KOMUNITA;
@@ -20,13 +20,13 @@ alter table POST
    drop constraint FK_POST_REFERENCE_KOMUNITA;
 
 alter table POST
-   drop constraint FK_POST_REFERENCE_USER;
+   drop constraint FK_POST_REFERENCE_USERS;
 
 alter table REPLY
    drop constraint FK_REPLY_REFERENCE_POST;
 
 alter table REPLY
-   drop constraint FK_REPLY_REFERENCE_USER;
+   drop constraint FK_REPLY_REFERENCE_USERS;
 
 alter table SYARAT
    drop constraint FK_SYARAT_REFERENCE_MODUL_MOD;
@@ -35,7 +35,7 @@ alter table SYARAT
    drop constraint FK_SYARAT_REFERENCE_MODUL;
 
 alter table USER_KOMUNITAS
-   drop constraint FK_USER_KOM_REFERENCE_USER;
+   drop constraint FK_USER_KOM_REFERENCE_USERS;
 
 alter table USER_KOMUNITAS
    drop constraint FK_USER_KOM_REFERENCE_KOMUNITA;
@@ -44,7 +44,7 @@ alter table USER_KOMUNITAS
    drop constraint FK_USER_KOM_REFERENCE_USER_ADM;
 
 alter table USER_MODUL
-   drop constraint FK_USER_MOD_REFERENCE_USER;
+   drop constraint FK_USER_MOD_REFERENCE_USERS;
 
 alter table USER_MODUL
    drop constraint FK_USER_MOD_REFERENCE_MODUL;
@@ -70,15 +70,15 @@ drop table USER_KOMUNITAS cascade constraints;
 drop table USER_MODUL cascade constraints;
 
 /*==============================================================*/
-/* Table: DATA_TRACKING                                             */
+/* Table: DATA_TRACKING                                         */
 /*==============================================================*/
-CREATE TABLE DATA_TRACKING (
-   data_id              VARCHAR( 10 ) NOT NULL ,
-   field                VARCHAR( 50 ) NOT NULL ,
-   old_value            VARCHAR( 500 ) NOT NULL ,
-   new_value            VARCHAR( 500 ) NOT NULL ,
-   modified             DATE NOT NULL
-); 
+create table DATA_TRACKING  (
+   DATA_ID              varchar(10)                     not null,
+   FIELD                varchar(50)                     not null,
+   OLD_VALUE            varchar(500)                    not null,
+   NEW_VALUE            varchar(500)                    not null,
+   MODIFIED             date                            not null
+);
 
 /*==============================================================*/
 /* Table: KOMUNITAS                                             */
@@ -150,14 +150,14 @@ create table SYARAT  (
 );
 
 /*==============================================================*/
-/* Table: USERS                                                */
+/* Table: USERS                                                 */
 /*==============================================================*/
 create table USERS  (
    USR_ID               CHAR(10)                        not null,
    USR_NRP              CHAR(15)                        not null,
    USR_NAMA             VARCHAR2(20)                    not null,
    USR_EMAIL            VARCHAR2(100)                   not null,
-   constraint PK_USER primary key (USR_ID)
+   constraint PK_USERS primary key (USR_ID)
 );
 
 /*==============================================================*/
@@ -183,7 +183,7 @@ create table USER_MODUL  (
 );
 
 alter table MODUL
-   add constraint FK_MODUL_REFERENCE_USER foreign key (USR_ID)
+   add constraint FK_MODUL_REFERENCE_USERS foreign key (USR_ID)
       references USERS (USR_ID);
 
 alter table MODUL
@@ -191,7 +191,7 @@ alter table MODUL
       references KOMUNITAS (KMT_ID);
 
 alter table PENGUMUMAN
-   add constraint FK_PENGUMUM_REFERENCE_USER foreign key (USR_ID)
+   add constraint FK_PENGUMUM_REFERENCE_USERS foreign key (USR_ID)
       references USERS (USR_ID);
 
 alter table PENGUMUMAN
@@ -203,7 +203,7 @@ alter table POST
       references KOMUNITAS (KMT_ID);
 
 alter table POST
-   add constraint FK_POST_REFERENCE_USER foreign key (USR_ID)
+   add constraint FK_POST_REFERENCE_USERS foreign key (USR_ID)
       references USERS (USR_ID);
 
 alter table REPLY
@@ -211,7 +211,7 @@ alter table REPLY
       references POST (POST_ID);
 
 alter table REPLY
-   add constraint FK_REPLY_REFERENCE_USER foreign key (USR_ID)
+   add constraint FK_REPLY_REFERENCE_USERS foreign key (USR_ID)
       references USERS (USR_ID);
 
 alter table SYARAT
@@ -223,7 +223,7 @@ alter table SYARAT
       references MODUL (MD_ID);
 
 alter table USER_KOMUNITAS
-   add constraint FK_USER_KOM_REFERENCE_USER foreign key (USR_ID)
+   add constraint FK_USER_KOM_REFERENCE_USERS foreign key (USR_ID)
       references USERS (USR_ID);
 
 alter table USER_KOMUNITAS
@@ -235,7 +235,7 @@ alter table USER_KOMUNITAS
       references USERS (USR_ID);
 
 alter table USER_MODUL
-   add constraint FK_USER_MOD_REFERENCE_USER foreign key (USR_ID)
+   add constraint FK_USER_MOD_REFERENCE_USERS foreign key (USR_ID)
       references USERS (USR_ID);
 
 alter table USER_MODUL
