@@ -1,17 +1,24 @@
--- Cek jika user bisa mengikuti suatu modul
+-- Cek jika user bisa mengikuti suatu modul berdasarkan syarat
 
-CREATE OR REPLACE FUNCTION bisa_ikut_modul(usr_id_in IN char, md_id_in IN char)
+CREATE OR REPLACE FUNCTION boleh_ikut_modul(usr_id_in IN char, md_id_in IN char)
 RETURN SMALLINT
-IS boleh INT;
+IS 
+    req INT;
+    rel INT;
 BEGIN
-    SELECT CT INTO boleh FROM (
-        SELECT STATUS_SELESAI, COUNT(STATUS_SELESAI) AS CT FROM USER_MODUL
-        WHERE USR_ID = usr_id_in GROUP BY STATUS_SELESAI HAVING STATUS_SELESAI = '0'
+    SELECT COUNT(MD_ID) INTO req FROM SYARAT
+    WHERE MD_ID = md_id_in;
+
+    SELECT COUNT(MD_ID) INTO rel FROM USER_MODUL
+    WHERE USR_ID = usr_id_in AND MD_ID IN (
+        SELECT MOD_MD_ID FROM SYARAT
+        WHERE MD_ID = md_id_in
     );
-    IF boleh > 0 THEN RETURN 0;
-    ELSE RETURN 1;
+
+    IF req = rel THEN RETURN 1;
+    ELSE RETURN 0;
     END IF;
-END bisa_ikut_modul;
+END;
 
 -- Cek jika user merupakan admin dari sebuah komunitas (argumen: USR_ID, KMT_ID) (return: true/false)
 
@@ -30,7 +37,7 @@ END is_admin;
 
 -- Cek jika user bisa mengikuti sebuah modul berdasarkan keanggotaan (argumen: USR_ID, MD_ID) (return: true/false)
 
-CREATE OR REPLACE FUNCTION bisa_ikut_modul_2(usr_id_in IN char, md_id_in IN char)
+CREATE OR REPLACE FUNCTION bisa_ikut_modul(usr_id_in IN char, md_id_in IN char)
 RETURN SMALLINT
 IS boleh INT;
 BEGIN
@@ -41,4 +48,4 @@ BEGIN
     IF boleh > 0 THEN RETURN 1;
     ELSE RETURN 0;
     END IF;
-END bisa_ikut_modul_2;
+END bisa_ikut_modul;
