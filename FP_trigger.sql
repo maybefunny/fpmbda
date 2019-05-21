@@ -1,0 +1,3 @@
+-- Validasi ketika user submit attachment (success | failed)
+-- Validasi tanggal tampil dan selesai ketika pembuatan pengumuman (success | failed)
+-- Validasi admin saat buat modul/pengumuman dan menerima/menolak keanggotaan komunitas
