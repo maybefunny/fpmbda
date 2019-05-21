@@ -27,3 +27,18 @@ BEGIN
     ELSE RETURN 0;
     END IF;
 END is_admin;
+
+-- Cek jika user bisa mengikuti sebuah modul berdasarkan keanggotaan (argumen: USR_ID, MD_ID) (return: true/false)
+
+CREATE OR REPLACE FUNCTION bisa_ikut_modul_2(usr_id_in IN char, md_id_in IN char)
+RETURN SMALLINT
+IS boleh INT;
+BEGIN
+    SELECT CT INTO boleh FROM (
+        SELECT count(MODUL.MD_ID) AS CT FROM MODUL join USER_KOMUNITAS on MODUL.KMT_ID = USER_KOMUNITAS.KMT_ID
+        WHERE USER_KOMUNITAS.USR_ID = usr_id_in AND MODUL.MD_ID = md_id_in
+    );
+    IF boleh > 0 THEN RETURN 1;
+    ELSE RETURN 0;
+    END IF;
+END bisa_ikut_modul_2;
